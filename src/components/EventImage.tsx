@@ -5,7 +5,7 @@ export type EventImageProps = {
     alt: string;
 };
 
-export function EventImage(props: EventImageProps) {
+export function EventImage(props: Readonly<EventImageProps>) {
   return (
     <Image
       src={props.src}
