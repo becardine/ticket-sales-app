@@ -1,12 +1,13 @@
 import Link from "next/link";
 import { EventModel } from "../models";
 import { EventImage } from "./EventImage";
+import { PropsWithChildren } from "react";
 
 export type EventCardProps = {
   event: EventModel;
 };
 
-export function EventCard(props: EventCardProps) {
+export function EventCard(props: PropsWithChildren<EventCardProps>) {
   return (
     <Link href={`/event/${props.event.id}/spots-layout`}>
       <div className="flex w-[277px] flex-col rounded-2xl bg-secondary">
