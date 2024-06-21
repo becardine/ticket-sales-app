@@ -22,7 +22,7 @@ export default async function CheckoutPage() {
     return redirect("/");
   }
   const event = await getEvent(eventId);
-  const selectedSpots = JSON.parse(cookiesStore.get("spots")?.value || "[]");
+  const selectedSpots = JSON.parse(cookiesStore.get("spots")?.value ?? "[]");
   let totalPrice = selectedSpots.length * event.price;
   const ticketKind = cookiesStore.get("ticketKind")?.value;
   if (ticketKind === "half") {
