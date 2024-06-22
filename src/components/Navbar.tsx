@@ -7,7 +7,7 @@ export function Navbar() {
       <div className="flex grow items-center justify-center">
         <Link href="/"> 
           <Image
-            src="/icon.svg"
+            src="icon.svg"
             alt="Icon DevTicket"
             width={136}
             height={48}
@@ -17,7 +17,7 @@ export function Navbar() {
       </div>
       <Link href={"/checkout"} className="min-h-6 min-w-6 grow-0 items-center">
         <Image
-          src="/cart-outline.svg"
+          src="cart-outline.svg"
           alt="Icon cart"
           width={24}
           height={24}

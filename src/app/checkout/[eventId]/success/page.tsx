@@ -15,9 +15,9 @@ export async function getEvent(eventId: string): Promise<EventModel> {
 
 export default async function CheckoutSuccessPage({
   params,
-}: {
+}: Readonly<{
   params: { eventId: string };
-}) {
+}>) {
   const event = await getEvent(params.eventId);
   const cookiesStore = cookies();
   const selectedSpots = JSON.parse(cookiesStore.get("spots")?.value || "[]");
